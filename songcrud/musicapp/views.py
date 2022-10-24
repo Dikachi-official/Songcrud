@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import *
 
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello, world. Welcome to my musicapp view")
+    return render(request,"index.html")  
 
 def home(request):
     return HttpResponse("My music app home view")
